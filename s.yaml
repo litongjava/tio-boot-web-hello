@@ -1,0 +1,35 @@
+edition: 3.0.0
+name: tio-boot-web-hello
+access: 'default'
+vars:
+  region: 'cn-hangzhou'
+
+resources:
+  framework:
+    component: fc3
+    actions:
+      pre-deploy:
+        - run: mvn clean package -DskipTests -Pproduction
+          path: .
+    props:
+      region: ${vars.region} #
+      description: Serverless Devs Web Framework Function
+      runtime: custom
+      memorySize: 1024
+      timeout: 30
+      instanceConcurrency: 100
+      customRuntimeConfig:
+        command:
+          - ./bootstrap
+      functionName: 'web-hello'
+      code: .
+  fc3_domain_0:
+    component: fc3-domain
+    props:
+      region: ${vars.region}
+      domainName: auto
+      protocol: HTTP
+      routeConfig:
+        routes:
+          - path: /*
+            functionName: ${resources.framework.props.functionName}
