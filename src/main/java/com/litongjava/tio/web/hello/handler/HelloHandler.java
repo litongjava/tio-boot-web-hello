@@ -17,6 +17,5 @@ public class HelloHandler {
     Map<String, String> data = new HashMap<>();
     RespVo respVo = RespVo.ok(data);
     return TioRequestContext.getResponse().setJson(respVo);
-
   }
 }
