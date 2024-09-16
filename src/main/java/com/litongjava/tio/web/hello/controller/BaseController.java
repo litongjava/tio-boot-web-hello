@@ -12,4 +12,12 @@ public class BaseController {
     kv.set("date", date);
     return RespVo.ok(kv);
   }
+
+  public RespVo string(String name, Integer age) {
+    Kv kv = Kv.create();
+    kv.set("name", name);
+    kv.set("age", age);
+    return RespVo.ok(kv);
+  }
+
 }

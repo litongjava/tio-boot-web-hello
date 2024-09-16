@@ -11,11 +11,11 @@ import com.litongjava.tio.utils.cache.AbsCache;
 import com.litongjava.tio.utils.cache.CacheFactory;
 import com.litongjava.tio.utils.resp.RespVo;
 
-@RequestPath("/")
+@RequestPath()
 public class IndexController {
   @RequestPath()
   public RespVo index() {
-    return RespVo.ok();
+    return RespVo.ok("1");
   }
 
   public RespVo cache() {

@@ -8,9 +8,9 @@
     <java.version>1.8</java.version>
     <maven.compiler.source>${java.version}</maven.compiler.source>
     <maven.compiler.target>${java.version}</maven.compiler.target>
-    <tio.boot.version>1.5.7</tio.boot.version>
+    <tio.boot.version>1.6.2</tio.boot.version>
     <lombok-version>1.18.30</lombok-version>
-    <hotswap-classloader.version>1.2.3</hotswap-classloader.version>
+    <hotswap-classloader.version>1.2.5</hotswap-classloader.version>
     <final.name>web-hello</final.name>
     <main.class>com.litongjava.tio.web.hello.HelloApp</main.class>
   </properties>
@@ -37,10 +37,15 @@
     <dependency>
       <groupId>com.litongjava</groupId>
       <artifactId>jfinal-aop</artifactId>
-      <version>1.2.5</version>
+      <version>1.2.7</version>
+    </dependency>
+    <dependency>
+      <groupId>com.litongjava</groupId>
+      <artifactId>hotswap-classloader</artifactId>
+      <version>${hotswap-classloader.version}</version>
     </dependency>
   </dependencies>
-  
+
   <profiles>
     <!-- 开发环境 -->
     <profile>
