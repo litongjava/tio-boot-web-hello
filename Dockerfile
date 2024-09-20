@@ -1,4 +1,4 @@
-FROM litongjava/jre:8u391-stable-slim
+FROM litongjava/jdk:8u411-stable-slim
 
 # Set the working directory in the container
 WORKDIR /app
