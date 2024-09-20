@@ -12,7 +12,7 @@ import com.litongjava.tio.http.server.router.HttpRequestRouter;
 import com.litongjava.tio.web.hello.handler.HelloHandler;
 import com.litongjava.tio.utils.type.TioTypeReference;
 
-@AConfiguration
+//@AConfiguration
 public class WebHelloConfig implements TioBootConfiguration {
 
   @Override
