@@ -1,9 +1,9 @@
 package com.litongjava.tio.web.hello.stat;
 
+import com.litongjava.aio.Packet;
 import com.litongjava.tio.core.ChannelContext;
 import com.litongjava.tio.core.Node;
 import com.litongjava.tio.core.TioConfig;
-import com.litongjava.tio.core.intf.Packet;
 import com.litongjava.tio.core.stat.IpStat;
 import com.litongjava.tio.core.stat.IpStatListener;
 import com.litongjava.tio.http.common.HttpRequest;

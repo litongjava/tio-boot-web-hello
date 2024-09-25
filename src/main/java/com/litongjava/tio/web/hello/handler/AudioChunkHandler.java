@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.net.URL;
 
+import com.litongjava.model.body.RespBodyVo;
 import com.litongjava.tio.boot.http.TioRequestContext;
 import com.litongjava.tio.core.ChannelContext;
 import com.litongjava.tio.core.Tio;
@@ -16,7 +17,6 @@ import com.litongjava.tio.http.common.sse.ChunkedPacket;
 import com.litongjava.tio.http.server.util.SseUtils;
 import com.litongjava.tio.utils.http.ContentTypeUtils;
 import com.litongjava.tio.utils.hutool.ResourceUtil;
-import com.litongjava.tio.utils.resp.RespVo;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -32,7 +32,7 @@ public class AudioChunkHandler {
     // 判断文件是否存在
     URL resource = ResourceUtil.getResource("samples/Blowin_in_the_Wind-16k.pcm");
     if (resource == null) {
-      response.fail(RespVo.fail("Resource not found"));
+      response.fail(RespBodyVo.fail("Resource not found"));
       return response;
     }
 
@@ -69,7 +69,7 @@ public class AudioChunkHandler {
 
       SseUtils.closeChunkConnection(channelContext);
     } catch (IOException e) {
-      response.fail(RespVo.fail("Failed to open resource:" + e.getMessage()));
+      response.fail(RespBodyVo.fail("Failed to open resource:" + e.getMessage()));
       return response;
     }
 

@@ -1,11 +1,11 @@
 package com.litongjava.tio.web.hello.controller;
 
+import com.litongjava.annotation.RequestPath;
 import com.litongjava.tio.boot.http.TioRequestContext;
 import com.litongjava.tio.core.Tio;
 import com.litongjava.tio.http.common.HttpRequest;
 import com.litongjava.tio.http.common.HttpResponse;
 import com.litongjava.tio.http.common.sse.SsePacket;
-import com.litongjava.tio.http.server.annotation.RequestPath;
 import com.litongjava.tio.http.server.util.SseUtils;
 import com.litongjava.tio.server.ServerChannelContext;
 

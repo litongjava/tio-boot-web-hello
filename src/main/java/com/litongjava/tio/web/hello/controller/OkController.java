@@ -1,13 +1,13 @@
 package com.litongjava.tio.web.hello.controller;
 
-import com.litongjava.tio.http.server.annotation.RequestPath;
-import com.litongjava.tio.utils.resp.RespVo;
+import com.litongjava.annotation.RequestPath;
+import com.litongjava.model.body.RespBodyVo;
 
 @RequestPath
 public class OkController {
 
   @RequestPath("/ok")
-  public RespVo ok() {
-    return RespVo.ok();
+  public RespBodyVo ok() {
+    return RespBodyVo.ok();
   }
 }

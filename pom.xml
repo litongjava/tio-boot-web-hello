@@ -8,9 +8,9 @@
     <java.version>1.8</java.version>
     <maven.compiler.source>${java.version}</maven.compiler.source>
     <maven.compiler.target>${java.version}</maven.compiler.target>
-    <tio.boot.version>1.6.3</tio.boot.version>
+    <tio.boot.version>1.6.5</tio.boot.version>
     <lombok-version>1.18.30</lombok-version>
-    <hotswap-classloader.version>1.2.5</hotswap-classloader.version>
+    <hotswap-classloader.version>1.2.6</hotswap-classloader.version>
     <final.name>web-hello</final.name>
     <main.class>com.litongjava.tio.web.hello.HelloApp</main.class>
   </properties>
