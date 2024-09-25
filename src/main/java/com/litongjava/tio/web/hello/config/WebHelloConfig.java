@@ -2,8 +2,8 @@ package com.litongjava.tio.web.hello.config;
 
 import java.io.IOException;
 
+import com.litongjava.annotation.AInitialization;
 import com.litongjava.context.BootConfiguration;
-import com.litongjava.jfinal.aop.annotation.AInitialization;
 import com.litongjava.model.type.TioTypeReference;
 import com.litongjava.tio.boot.server.TioBootServer;
 import com.litongjava.tio.http.server.handler.IHttpRequestFunction;

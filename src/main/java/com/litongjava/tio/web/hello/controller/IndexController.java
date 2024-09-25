@@ -8,9 +8,13 @@ import com.jfinal.kit.Kv;
 import com.litongjava.annotation.RequestPath;
 import com.litongjava.model.body.RespBodyVo;
 import com.litongjava.tio.boot.server.TioBootServer;
+import com.litongjava.tio.server.ServerTioConfig;
 import com.litongjava.tio.utils.cache.AbsCache;
 import com.litongjava.tio.utils.cache.CacheFactory;
 
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
 @RequestPath()
 public class IndexController {
   @RequestPath()
@@ -19,7 +23,9 @@ public class IndexController {
   }
 
   public RespBodyVo cache() {
-    CacheFactory cacheFactory = TioBootServer.me().getServerTioConfig().getCacheFactory();
+    ServerTioConfig serverTioConfig = TioBootServer.me().getServerTioConfig();
+    log.info("serverTioConfig:{}",serverTioConfig);
+    CacheFactory cacheFactory = serverTioConfig.getCacheFactory();
     AbsCache absCache = cacheFactory.register("test001", 300L, 3000L);
     absCache.put("key", "value");
     Map<String, ? extends AbsCache> map = cacheFactory.getMap();

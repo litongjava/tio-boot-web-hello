@@ -1,11 +1,10 @@
 package com.litongjava.tio.web.hello.config;
 
-import com.litongjava.annotation.AConfiguration;
-import com.litongjava.jfinal.aop.annotation.AInitialization;
+import com.litongjava.annotation.AInitialization;
 import com.litongjava.tio.boot.server.TioBootServer;
 import com.litongjava.tio.server.ServerTioConfig;
 
-@AConfiguration
+// @AConfiguration
 public class TioBootServerConfig {
 
   @AInitialization
