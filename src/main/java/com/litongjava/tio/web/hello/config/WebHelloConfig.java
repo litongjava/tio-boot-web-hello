@@ -1,9 +1,7 @@
 package com.litongjava.tio.web.hello.config;
 
-import java.io.IOException;
-
+import com.litongjava.annotation.AConfiguration;
 import com.litongjava.annotation.AInitialization;
-import com.litongjava.context.BootConfiguration;
 import com.litongjava.model.type.TioTypeReference;
 import com.litongjava.tio.boot.server.TioBootServer;
 import com.litongjava.tio.http.server.handler.IHttpRequestFunction;
@@ -11,12 +9,11 @@ import com.litongjava.tio.http.server.router.HttpRequestFunctionRouter;
 import com.litongjava.tio.http.server.router.HttpRequestRouter;
 import com.litongjava.tio.web.hello.handler.HelloHandler;
 
-//@AConfiguration
-public class WebHelloConfig implements BootConfiguration {
+@AConfiguration
+public class WebHelloConfig {
 
-  @Override
   @AInitialization
-  public void config() throws IOException {
+  public void config() {
 
     TioBootServer server = TioBootServer.me();
     HttpRequestRouter requestRouter = server.getRequestRouter();
