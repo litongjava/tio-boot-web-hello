@@ -8,7 +8,7 @@ import com.litongjava.tio.boot.server.TioBootServer;
 import com.litongjava.tio.web.hello.inteceptor.GlobalInteceptor;
 import com.litongjava.tio.web.hello.inteceptor.HelloInteceptor;
 
-@AConfiguration
+//@AConfiguration
 public class IntecpetorConfiguration {
 
   @AInitialization
