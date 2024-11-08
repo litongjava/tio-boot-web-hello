@@ -1,7 +1,6 @@
  package com.litongjava.tio.web.hello.config;
 
-import com.litongjava.annotation.AConfiguration;
-import com.litongjava.annotation.AInitialization;
+import com.litongjava.annotation.Initialization;
 import com.litongjava.tio.boot.http.interceptor.HttpInteceptorConfigure;
 import com.litongjava.tio.boot.http.interceptor.HttpInterceptorModel;
 import com.litongjava.tio.boot.server.TioBootServer;
@@ -11,7 +10,7 @@ import com.litongjava.tio.web.hello.inteceptor.HelloInteceptor;
 //@AConfiguration
 public class IntecpetorConfiguration {
 
-  @AInitialization
+  @Initialization
   public void serverInteceptorRoutes() {
 
     // add global

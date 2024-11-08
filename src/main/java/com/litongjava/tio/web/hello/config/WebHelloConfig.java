@@ -1,7 +1,7 @@
 package com.litongjava.tio.web.hello.config;
 
 import com.litongjava.annotation.AConfiguration;
-import com.litongjava.annotation.AInitialization;
+import com.litongjava.annotation.Initialization;
 import com.litongjava.model.type.TioTypeReference;
 import com.litongjava.tio.boot.server.TioBootServer;
 import com.litongjava.tio.http.server.handler.IHttpRequestFunction;
@@ -12,7 +12,7 @@ import com.litongjava.tio.web.hello.handler.HelloHandler;
 @AConfiguration
 public class WebHelloConfig {
 
-  @AInitialization
+  @Initialization
   public void config() {
 
     TioBootServer server = TioBootServer.me();
