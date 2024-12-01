@@ -6,7 +6,7 @@ import com.litongjava.tio.core.Tio;
 import com.litongjava.tio.http.common.HttpRequest;
 import com.litongjava.tio.http.common.HttpResponse;
 import com.litongjava.tio.http.common.sse.SsePacket;
-import com.litongjava.tio.http.server.util.SseUtils;
+import com.litongjava.tio.http.server.util.SseEmitter;
 import com.litongjava.tio.server.ServerChannelContext;
 
 import lombok.extern.slf4j.Slf4j;
@@ -40,7 +40,7 @@ public class SseController {
       }
     }
     // 手动移除连接
-    SseUtils.closeSeeConnection(channelContext);
+    SseEmitter.closeSeeConnection(channelContext);
 
     // 告诉处理器不要将消息发送给客户端
     return null;

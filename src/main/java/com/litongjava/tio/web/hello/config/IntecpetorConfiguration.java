@@ -16,12 +16,12 @@ public class IntecpetorConfiguration {
     // add global
     HttpInterceptorModel global = new HttpInterceptorModel();
     global.setName("global");
-    global.addblockeUrl("/**");
+    global.addBlockUrl("/**");
     global.setInterceptor(new GlobalInteceptor());
 
     HttpInterceptorModel hello = new HttpInterceptorModel();
     hello.setName("hello");
-    hello.addblockeUrl("/hello");
+    hello.addBlockUrl("/hello");
     hello.setInterceptor(new HelloInteceptor());
 
     HttpInteceptorConfigure config = new HttpInteceptorConfigure();
