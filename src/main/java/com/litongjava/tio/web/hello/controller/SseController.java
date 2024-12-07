@@ -39,11 +39,15 @@ public class SseController {
         e.printStackTrace();
       }
     }
+
+    SsePacket ssePacket = new SsePacket().data("end".getBytes());
+    // 再次向客户端发送消息
+    Tio.send(channelContext, ssePacket);
     // 手动移除连接
     SseEmitter.closeSeeConnection(channelContext);
 
     // 告诉处理器不要将消息发送给客户端
-    return null;
+    return httpResponse.setSent(false);
 
   }
 }
