@@ -47,7 +47,7 @@ public class SseController {
     SseEmitter.closeSeeConnection(channelContext);
 
     // 告诉处理器不要将消息发送给客户端
-    return httpResponse.setSent(false);
+    return httpResponse.setSend(false);
 
   }
 }
