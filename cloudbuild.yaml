@@ -1,0 +1,14 @@
+steps:
+- name: 'maven:3.9-eclipse-temurin-21'
+  entrypoint: 'mvn'
+  args: ['clean', 'package', '-P', 'production', '-DskipTests']
+
+- name: 'gcr.io/cloud-builders/docker'
+  args:
+    - 'buildx'
+    - 'build'
+    - '--platform=linux/arm64'
+    - '-t'
+    - 'us-central1-docker.pkg.dev/$PROJECT_ID/tio-test/tio-boot-web-hello:1.0.0'
+    - '--push'
+    - '.'
