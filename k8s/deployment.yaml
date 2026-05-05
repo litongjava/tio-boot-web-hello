@@ -24,7 +24,7 @@ spec:
           effect: NoSchedule
       containers:
         - name: app
-          image: us-central1-docker.pkg.dev/ambient-scope-486709-t4/tio-test/tio-boot-web-hello:1.0.0
+          image: us-central1-docker.pkg.dev/ambient-scope-486709-t4/tio-test/tio-boot-web-hello:latest
           imagePullPolicy: Always
           ports:
             - name: http
